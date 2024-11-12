@@ -76,3 +76,27 @@ for item in old_list:
     new_list.append(item)
 
     print(new_list)
+
+
+#Adicionar novos elementos
+cidades = ['Recife', 'Fortaleza', 'Salvador']
+cidades.extend(['Rio de Janeiro', 'São Paulo'])
+
+print(cidades)
+
+print(cidades.index('Rio de Janeiro'))
+
+#Adiciona no indice 2 o elemento 110 e chega paea o lado os outros elementos
+cidades.insert(2, 110)
+
+print(cidades)
+
+#inverte a lista
+cidades.reverse()
+print(cidades)
+
+#ordenar lista
+x = [5, 8, 1, 3, 0]
+x.sort()
+
+print(x)
