@@ -27,3 +27,33 @@ print(nome[::2])
 letra = 's'
 
 print(letra*2)
+
+
+#Funções Bulti-in
+
+#minusculo
+print(nome.lower())
+
+#maiusculo
+nome.upper()
+
+#quebra a string, vc tbm pode passa como paramentro em qual string vc quer que ele quebre nome.split('b')
+nome.split()
+
+#só a primeira letra da frase em maiusculo
+nome.capitalize()
+
+#conta quantas vezes a letra 'a' aparece
+nome.count('a')
+
+#pergunta se o objeto é td de numeros]
+nome.isalnum()
+
+#pergunta se a string ta td minuscula
+nome.islower()
+
+#pergunta se a string é toda espaços
+nome.isspace()
+
+#pergunta se a string termina com determinada letra
+nome.endswith('a')
