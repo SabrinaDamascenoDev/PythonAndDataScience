@@ -61,3 +61,24 @@ c = dic2["Key3"]
 
 print(a, b, c)
 
+dict3 = {"chave1":12, "chave2":["sabs", "sasab"]}
+
+#mudar o que ta no indice 0 da lista para maiusculo
+dict3['chave2'][0] = dict3['chave2'][0].upper()
+print(dict3["chave2"][0])
+
+dict4 = {"chave1":34,  "chave2":[23, 4, 7, 9]}
+
+#subtrai 2 do 23
+dict4['chave2'][0] -= 2
+
+print(dict4['chave2'])
+
+#criando dicionario dentro de dicionario
+
+dict_alinhado = {'key1':{'key2':{'key3':'Python its easy'}}}
+
+print(dict_alinhado)
+#conseguir a frase que ta dentro do key3
+print(dict_alinhado['key1']['key2']['key3'])
+
