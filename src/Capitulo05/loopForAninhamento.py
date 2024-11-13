@@ -1,3 +1,5 @@
+from sympy.integrals.intpoly import main_integrate
+
 lista01 = [1, 2, 3, 4]
 lista2 = [5, 6, 7]
 
@@ -33,3 +35,23 @@ for num in lista4+lista3:
     if num%2 == 0:
         soma+=num
 print(soma)
+
+matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+maior_numero = 0
+
+for linha in matriz:
+    for num in linha:
+        if num > maior_numero:
+            maior_numero = num
+
+print("O maior número da matriz é:", maior_numero)
+
+dic = {"k1":"Python",  "k2":"JavaScript", "k3":"Java"}
+
+#Cada item é a chave
+for item in dic:
+    print(item)
+#Retorna a chave e o valor relacoionado a chave
+for k, v in dic.items():
+    print(k, v)
