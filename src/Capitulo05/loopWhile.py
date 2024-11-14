@@ -32,7 +32,7 @@ for letra in "Python é zzz incrivel":
 #Loop while and for juntos
 lista = []
 
-#minha forma com for + for
+#Minha forma com for + for
 for i in range(1, 31):
     divisiveis = 0;
     for j in range(1, 31):
@@ -42,3 +42,21 @@ for i in range(1, 31):
         lista.append(i)
 
 print(lista)
+
+#Forma do professor com for + while
+
+primos = []
+
+for n in range(2, 31):
+    eh_primo = True
+    i = 2
+    while n <= i // 2:
+        if n % i == 0:
+            eh_primo = False
+            break
+        i+=1
+
+    if eh_primo:
+        primos.append(n)
+
+print(primos)
