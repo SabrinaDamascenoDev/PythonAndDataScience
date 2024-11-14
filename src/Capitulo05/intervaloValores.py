@@ -1,5 +1,6 @@
 #Intervalo de valores com python
-from sqlalchemy.sql.functions import random
+
+
 
 #1-10
 for i in range(1, 11):
