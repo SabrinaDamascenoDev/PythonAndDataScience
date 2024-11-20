@@ -9,3 +9,9 @@ def numPrimo(num):
     return "É primo"
 
 print(numPrimo(5))
+
+def lowercase(nome):
+    return nome.lower()
+
+nomeMeu = "SASASa"
+print(lowercase(nomeMeu))
