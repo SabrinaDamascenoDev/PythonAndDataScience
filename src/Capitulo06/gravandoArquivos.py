@@ -2,7 +2,7 @@
 arq = open('arquivos/arq2.txt', 'w')
 
 arq.write("Aprendendo python")
-
+arq.close()
 arq = open('arquivos/arq2.txt', 'r')
 print(arq.read())
 

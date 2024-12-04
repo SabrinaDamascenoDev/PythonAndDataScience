@@ -17,7 +17,7 @@ for elemento in full_data:
 
 print(count)
 
-
+f.close()
 arq = open('arquivos/arquivos/salarios.csv', 'r')
 arqEle = arq.read()
 rowsAll = arqEle.split('\n')
@@ -35,13 +35,13 @@ for element in first_elemento:
     countCol +=1
 
 print(countCol)
-
+arq.close()
 info = open('arquivos/arq3.txt', 'w')
 
 info.write("Só testando para criar esse arquivo")
-
+info.close()
 infor = open('arquivos/arq3.txt', 'a')
-
+infor.close()
 infor.write(' \n  viu \n viu ')
 infors = open('arquivos/arquivos/arquivo3.txt', 'r')
 print(infors.readlines())
@@ -49,3 +49,5 @@ print(infors.readlines())
 
 for row in open('arquivos/arquivos/arquivo3.txt'):
     print(row)
+
+infors.close()
