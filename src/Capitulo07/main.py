@@ -10,7 +10,74 @@ def limpa_tela():
     else:
         _= system('clear')
 
+def display_hangman(chances):
+    stages = [
+        '''
+            ----------
+            |        | 
+            |        0
+            |       
+            |           
+            |        
+            -
+        ''',
+        '''
+             ----------
+             |        | 
+             |        0
+             |        |
+             |           
+             |        
+             -
+        ''',
+        '''
+             ----------
+             |        | 
+             |        0
+             |        | 
+             |        |  
+             |        
+             -
+        ''',
+        '''
+             ----------
+             |        | 
+             |        0
+             |       \|
+             |        |   
+             |        
+             -
+        ''',
+        '''
+             ----------
+             |        | 
+             |        0
+             |       \|/ 
+             |        |   
+             |        
+             -
+        ''',
+        '''
+            ----------
+            |        | 
+            |        0
+            |       \|/ 
+            |        |   
+            |       / 
+            -
+        ''',
+        '''
+            ----------
+            |        | 
+            |        0
+            |       \|/ 
+            |        |   
+            |       / \\
+            -
+        '''
 
+    ]
+    return stages[chances]
 def game():
     limpa_tela()
 
@@ -25,10 +92,14 @@ def game():
     naoAchou = 0
     linhasDescobertas = []
 
+
+
+
     for i in palavra:
         linhasDescobertas.append("_")
     while chances > 0:
 
+        print(display_hangman(chances))
         print(" ".join(linhasDescobertas))
         print("\nChances restantes:", chances)
         print("Letras erradas: ", len(letras_erradas))
@@ -44,6 +115,7 @@ def game():
         else:
             letras_erradas.append(tentativa)
             chances -= 1
+
         count =0
         for i in linhasDescobertas:
             if i != "_":
@@ -54,7 +126,9 @@ def game():
             break
 
     if count != len(palavra):
+        print(display_hangman(chances))
         print("\nVocê perdeu, a palavra era: ", palavra)
 
 
-game()
+if __name__ == "__main__":
+    game()
