@@ -14,4 +14,47 @@ def limpa_tela():
 def game():
     limpa_tela()
 
-    print()
+    print("\nBem-vindo(a) ao jogo da forca! \nAdivinhe a palavra abaixo:\n")
+
+    #Listas de palavras
+    palavras = ["banana", "uva", "abacati", "morango", "melancia"]
+    palavra = random.choice(palavras)
+
+    chances = 6
+    letras_erradas = []
+    naoAchou = 0
+    linhasDescobertas = []
+
+    for i in palavra:
+        linhasDescobertas.append("_")
+    while chances > 0:
+
+        print(" ".join(linhasDescobertas))
+        print("\nChances restantes:", chances)
+        print("Letras erradas: ", len(letras_erradas))
+
+        tentativa = input("\nDigite uma letra:")
+
+        if tentativa in palavra:
+            index = 0
+            for letra in palavra:
+                if tentativa == letra:
+                    linhasDescobertas[index] = letra
+                index+=1
+        else:
+            letras_erradas.append(tentativa)
+            chances -= 1
+        count =0
+        for i in linhasDescobertas:
+            if i != "_":
+                count+=1
+
+        if count == len(palavra):
+            print("Parabéns, você acertou!")
+            break
+
+    if count != len(palavra):
+        print("\nVocê perdeu, a palavra era: ", palavra)
+
+
+game()
