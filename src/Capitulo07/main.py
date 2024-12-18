@@ -79,6 +79,7 @@ def display_hangman(chances):
     ]
     return stages[chances]
 def game():
+
     limpa_tela()
 
     print("\nBem-vindo(a) ao jogo da forca! \nAdivinhe a palavra abaixo:\n")
