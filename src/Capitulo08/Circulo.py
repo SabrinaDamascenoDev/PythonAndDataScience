@@ -11,3 +11,7 @@ class Circulo:
 
     def getRaio(self):
         return self.raio
+
+circ = Circulo()
+
+print(circ.area())
